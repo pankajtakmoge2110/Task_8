@@ -129,6 +129,18 @@
 
 <!---   JavaScript     -->
 <script>
+  
+  function toggleMode() {
+    document.body.classList.toggle("bg-dark");
+    document.body.classList.toggle("text-white");
+
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+      card.classList.toggle("bg-dark");
+      card.classList.toggle("text-white");
+    });
+  }
+
   const posts = [
     { title: "Post 1", desc: "This is blog 1", img: "https://picsum.photos/300/200?1" },
     { title: "Post 2", desc: "This is blog 2", img: "https://picsum.photos/300/200?2" },
